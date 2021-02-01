@@ -12,6 +12,8 @@ export CC_3ds := $(DEVKITARM)/bin/arm-none-eabi-gcc
 export TARGET_CFLAGS := -specs=3dsx.specs -mfloat-abi=hard -march=armv6k -mtune=mpcore \
 						-mfpu=vfp -mtp=soft
 
+export XARGO_RUST_SRC=/home/vivlim/git/rust-vivlim/library
+
 .PHONY: all clean $(CRATE_NAME) dist test send target/3ds/release/$(CRATE_NAME).elf
 
 all: $(CRATE_NAME) 

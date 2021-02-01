@@ -3,5 +3,6 @@
 [dependencies.panic_unwind]
 
 [dependencies.std]
-git = "https://github.com/rust3ds/ctru-rs"
+#git = "https://github.com/rust3ds/ctru-rs"
+path = "/home/vivlim/git/rust-vivlim/library/std"
 stage = 1
