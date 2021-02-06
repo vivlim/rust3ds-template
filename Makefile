@@ -8,6 +8,9 @@ PROG_ICON := $(DEVKITPRO)/libctru/default_icon.png
 3DSXTOOL := $(DEVKITPRO)/tools/bin/3dsxtool
 SMDHTOOL := $(DEVKITPRO)/tools/bin/smdhtool
 
+# Prepend devkitarm bin to PATH, in case there is another arm-none-eabi-gcc installed
+export PATH := $(DEVKITARM)/bin:$(PATH)
+
 export CC_3ds := $(DEVKITARM)/bin/arm-none-eabi-gcc
 export TARGET_CFLAGS := -specs=3dsx.specs -mfloat-abi=hard -march=armv6k -mtune=mpcore \
 						-mfpu=vfp -mtp=soft
@@ -19,7 +22,7 @@ export XARGO_RUST_SRC=/home/vivlim/git/rust-vivlim/library
 all: $(CRATE_NAME) 
 
 target/3ds/release/$(CRATE_NAME).elf:
-	RUST_TARGET_PATH=$(shell pwd) xargo build --release
+	RUST_TARGET_PATH=$(shell pwd) xargo build --release -v
 
 target/3ds/release/$(CRATE_NAME).smdh:
 	$(SMDHTOOL) --create "${PROG_NAME}" "${PROG_DESC}" "${PROG_AUTHOR}" "${PROG_ICON}" target/3ds/release/$(CRATE_NAME).smdh
