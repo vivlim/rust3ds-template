@@ -1,4 +1,5 @@
 extern crate ctru;
+extern crate ctru_sys as libctru;
 
 use ctru::gfx::Gfx;
 use ctru::console::Console;
@@ -23,6 +24,9 @@ fn main() {
         hid.scan_input();
         if hid.keys_down().contains(KeyPad::KEY_START) {
             break;
+        }
+        if hid.keys_down().contains(KeyPad::KEY_SELECT) {
+            panic!("what if i were to panic... on purpose >:)");
         }
     }
 }

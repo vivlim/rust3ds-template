@@ -5,6 +5,7 @@ version = "0.1.0"
 
 [dependencies]
 ctru-rs = { path = "/home/vivlim/git/ctru-rs/ctru-rs" }
+ctru-sys = { path = "/home/vivlim/git/ctru-rs/ctru-sys" }
 
 [profile.dev]
 lto = true

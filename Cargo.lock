@@ -34,6 +34,7 @@ name = "rust3ds-template"
 version = "0.1.0"
 dependencies = [
  "ctru-rs",
+ "ctru-sys",
 ]
 
 [[package]]
