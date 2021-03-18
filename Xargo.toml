@@ -2,9 +2,5 @@
 [dependencies.panic_unwind]
 
 [dependencies.std]
-#git = "https://github.com/rust3ds/ctru-rs"
-path = "/home/vivlim/git/rust-vivlim/library/std"
+path = "../rust-3ds-fork/library/std"
 stage = 1
-
-#[target.3ds.dependencies]
-#core = { path = "/home/vivlim/git/rust-vivlim/library/core" }
