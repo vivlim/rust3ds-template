@@ -2,7 +2,7 @@
 
 An example project demonstrating how to compile and run Rust programs on the Nintendo 3DS using [ctru-rs](https://github.com/rust3ds/ctru-rs).
 
-Sorry, I haven't gotten around to updating the below docs yet; please look at https://github.com/vivlim/3ds-rust-env
+**Sorry, I haven't gotten around to updating the below docs yet; please look at https://github.com/vivlim/3ds-rust-env first.**
 
 ## Requirements
 
